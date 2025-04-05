@@ -6,6 +6,7 @@ import com.prashu.javadesignpatterns.behavioral.observer.observer.impl.MobileAle
 import com.prashu.javadesignpatterns.behavioral.observer.observer.NotificationAlertObserver
 import com.prashu.javadesignpatterns.behavioral.strategy.SportVehicle
 import com.prashu.javadesignpatterns.behavioral.strategy.interfaceimpl.SportDriveStrategyImpl
+import com.prashu.javadesignpatterns.creational.factory.Factory
 import com.prashu.javadesignpatterns.creational.singleton.SingleTonDesignPattern
 import com.prashu.javadesignpatterns.creational.singleton.SingleTonEagerInitialization
 import com.prashu.javadesignpatterns.creational.singleton.SingletonBillPugh
@@ -50,5 +51,11 @@ fun main() {
     //Bill Pugh SingleTon
     val singleTonDesignPattern3 = SingletonBillPugh.getInstance()
     singleTonDesignPattern3.showText()
+
+    // Factory Pattern
+    val factory = Factory()
+    factory.getDriveType(Factory.DriveType.SPORT).drive()
+    factory.getDriveType(Factory.DriveType.NORMAL).drive()
+
 
 }
